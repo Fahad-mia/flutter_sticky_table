@@ -18,6 +18,15 @@ class _TableDataState extends State<TableData> {
     'Stock',
     'Sell_Date'
   ];
+  final List<Map<String, String>> cellData = List.generate(20, (i){
+    return {
+      "ID": "${i+1}",
+      "Name": "item ${i + 1}",
+      "Brand": i % 2 == 0 ? "Transtec" : "Bangladesh Lamps",
+      "Price": "${i + 1 * 10}",
+
+    };
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
